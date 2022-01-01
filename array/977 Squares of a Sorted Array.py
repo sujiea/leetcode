@@ -7,13 +7,13 @@ class Solution:
         right = len(nums) - 1
         square = [0] * len(nums)
         i = len(nums) - 1
-        right_square = int(math.pow(nums[right], 2))
-        left_square = int(math.pow(nums[left], 2))
+        right_square = nums[right] ** 2
+        left_square = nums[left] ** 2
         while left < right:
             if left_square <= right_square:
                 square[i] = right_square
                 right -= 1
-                right_square = int(math.pow(nums[right], 2))
+                right_square = nums[right] ** 2
             else:
                 square[i] = left_square
                 left += 1
